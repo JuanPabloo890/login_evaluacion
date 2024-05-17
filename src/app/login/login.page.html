@@ -1,0 +1,23 @@
+<ion-header translucent> <!-- Añadir el atributo translucent para un encabezado transparente -->
+  <ion-toolbar color="primary"> <!-- Establecer el color de la barra de herramientas -->
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()" color="light"> <!-- Establecer el color del botón y del icono -->
+        <ion-icon name="arrow-back" color="dark"></ion-icon> <!-- Establecer el color del icono -->
+        <ion-text class="button-text">Back</ion-text> <!-- Utilizar ion-text para el texto del botón -->
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding"> <!-- Utilizar clases de padding proporcionadas por Ionic -->
+  <ion-item lines="none"> <!-- Eliminar las líneas de los elementos -->
+    <ion-label position="floating">Email</ion-label>
+    <ion-input type="email" [(ngModel)]="email"></ion-input>
+  </ion-item>
+  <ion-item lines="none">
+    <ion-label position="floating">Password</ion-label>
+    <ion-input type="password" [(ngModel)]="password"></ion-input>
+  </ion-item>
+  <ion-button expand="full" (click)="login()">Login</ion-button>
+</ion-content>
